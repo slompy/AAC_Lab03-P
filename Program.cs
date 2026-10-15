@@ -3,7 +3,7 @@ using System.Text;
 
 int number = 305419896;
 Console.WriteLine($"Число: {number}");
-Console.WriteLine($"В hex: 0x{number}:X8");
+Console.WriteLine($"В hex: 0x{number:X8}");
 Console.WriteLine($"Little-endian: {BitConverter.IsLittleEndian}");
 
 Byte[] numberBytes = BitConverter.GetBytes(number);
@@ -17,3 +17,4 @@ Console.WriteLine($"Текст: {text}");
 byte[] textBytes = Encoding.UTF8.GetBytes(text);
 Console.WriteLine("Байты текста UTF-8:");
 Console.WriteLine(BitConverter.ToString(textBytes));
+
